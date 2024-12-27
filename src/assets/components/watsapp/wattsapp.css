@@ -1,0 +1,123 @@
+/* Container for WhatsApp icon and message bubble */
+
+.wattsapp-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #25d366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 2s infinite, pulse 1.5s infinite;
+    /* Combined animations */
+    transition: transform 0.3s ease;
+    /* Smooth scaling on hover */
+    z-index: 1000;
+    /* Ensure it's above other elements */
+}
+
+.wattsapp-button:hover {
+    transform: scale(1.2);
+    /* Slight zoom on hover */
+}
+
+.wattsapp-icon {
+    width: 40px;
+    /* Icon size */
+    height: 40px;
+}
+
+
+/* Typing Effect */
+
+.message-bubble {
+    position: absolute;
+    bottom: 80px;
+    /* Adjust position relative to the icon */
+    left: 0;
+    background-color: #25d366;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 15px;
+    opacity: 0;
+    /* Initially hidden */
+    animation: fadeIn 2s ease-out forwards, typing 1.5s steps(3, end) infinite;
+    /* Combined animations */
+}
+
+
+/* Typing effect */
+
+.typing-effect {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Keyframe for bounce effect */
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* Keyframe for pulse animation */
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+
+/* Keyframe for the typing effect */
+
+@keyframes typing {
+    0% {
+        content: "";
+    }
+    33% {
+        content: ".";
+    }
+    66% {
+        content: "..";
+    }
+    100% {
+        content: "...";
+    }
+}
+
+
+/* Keyframe to fade in the message bubble */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

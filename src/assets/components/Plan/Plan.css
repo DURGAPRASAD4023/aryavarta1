@@ -1,0 +1,218 @@
+/* Plan.css */
+
+.plan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 20vh;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: 20px;
+    /* Add space between the buttons */
+}
+
+.but {
+    background-color: #000;
+    /* Button color */
+    border: none;
+    color: white;
+    width: 200px;
+    /* Fixed width */
+    height: 80px;
+    /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 0 70px;
+    /* Center the buttons */
+    border-radius: 15%;
+}
+
+.plans-button {
+    background-color: #000;
+    /* Button color */
+}
+
+.but:hover {
+    background-color: #bbac5e9f;
+    /* Hover effect */
+    transform: scale(1.05);
+    color: #000;
+}
+
+.download-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.download-button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    animation: download-progress 0.3s linear infinite;
+    border-radius: 15%;
+}
+
+@keyframes download-progress {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    .but {
+        width: 180px;
+        /* Smaller width for tablet */
+        height: 70px;
+        /* Smaller height for tablet */
+        margin: 0 50px;
+        /* Adjust margin for tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .plan {
+        flex-direction: column;
+        /* Stack buttons vertically on small screens */
+        height: auto;
+    }
+    .but {
+        width: 160px;
+        /* Smaller width for mobile */
+        height: 60px;
+        /* Smaller height for mobile */
+        margin: 10px 0;
+        /* Adjust margin for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .but {
+        width: 140px;
+        /* Smaller width for small mobile */
+        height: 50px;
+        /* Smaller height for small mobile */
+        font-size: 14px;
+        /* Smaller font size for small mobile */
+    }
+}
+
+
+/* Plan.css */
+
+.a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(14, 14, 93, 1) 27%, rgba(0, 212, 255, 1) 100%);
+    ;
+    /* Light background color for better contrast */
+    position: relative;
+}
+
+.c {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #646667;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.c:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.b {
+    background-color: #eeebeb;
+    /* White background for sections */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 20px;
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    animation: fadeIn 1s ease-in-out;
+    color: #0a0808;
+    /* Fade-in animation */
+}
+
+.d {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    /* Smooth scaling effect */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    .b {
+        width: 90%;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .a {
+        padding: 10px;
+    }
+    .b {
+        width: 95%;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .b {
+        width: 100%;
+        margin-top: 60px;
+    }
+}

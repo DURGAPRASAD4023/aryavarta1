@@ -1,0 +1,72 @@
+/* General Footer Styles */
+
+.footer {
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #797979;
+    padding: 20px;
+    background-color: #f8f8f8;
+    /* Light gray background for contrast */
+    font-size: 14px;
+    color: #333;
+    /* Dark text color */
+    font-family: 'Arial', sans-serif;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #555;
+}
+
+.footer ul {
+    display: flex;
+    padding: 0;
+}
+
+.footer ul li {
+    list-style: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.footer ul li:hover {
+    color: #0073e6;
+    /* Highlight color for hover effect */
+    transition: color 0.3s ease;
+}
+
+
+/* Mobile responsiveness */
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer ul {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+    .footer ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Extra small devices (phones in portrait mode) */
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px;
+    }
+    .footer p {
+        font-size: 12px;
+    }
+    .footer ul li {
+        font-size: 12px;
+    }
+}
